@@ -1,0 +1,47 @@
+{
+  "name": "vscode-config-resolver",
+  "version": "1.0.0",
+  "description": "Find configuration for the current file from provided path, workspace, package or HOME directory",
+  "license": "MIT",
+  "repository": "mrmlnc/vscode-config-resolver",
+  "author": {
+    "name": "Denis Malinochkin",
+    "url": "canonium.com"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./out/vcr.js",
+  "typings": "./out/vcr.d.ts",
+  "keywords": [
+    "vscode",
+    "config",
+    "configuration",
+    "resolver",
+    "resolve"
+  ],
+  "devDependencies": {
+    "@types/mocha": "^2.2.39",
+    "@types/node": "^7.0.5",
+    "@types/proxyquire": "^1.3.27",
+    "mocha": "^3.2.0",
+    "proxyquire": "^1.7.11",
+    "rimraf": "^2.5.4",
+    "tslint": "^4.4.2",
+    "tslint-config-xo": "^1.1.0",
+    "typescript": "^2.1.6"
+  },
+  "dependencies": {
+    "find-up": "^2.1.0",
+    "locate-path": "^2.0.0",
+    "require-from-string": "^1.2.1"
+  },
+  "scripts": {
+    "clean": "rimraf out",
+    "lint": "tslint src/**/*.ts",
+    "compile": "tsc",
+    "test": "mocha out/{,**/}*.spec.js -s 0",
+    "build": "npm run clean && npm run lint && npm run compile && npm test",
+    "watch": "npm run clean && npm run lint && npm run compile -- --sourceMap --watch"
+  }
+}
