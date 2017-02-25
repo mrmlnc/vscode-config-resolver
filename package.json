@@ -1,6 +1,6 @@
 {
   "name": "vscode-config-resolver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find configuration for the current file from provided path, workspace, package or HOME directory",
   "license": "MIT",
   "repository": "mrmlnc/vscode-config-resolver",
