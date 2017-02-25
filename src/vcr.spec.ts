@@ -99,6 +99,19 @@ describe('vscode-config-resolver', () => {
 		});
 	});
 
+	it('Should return config from package.json property', () => {
+		const options = {
+			packageProp: 'testProperty'
+		};
+
+		return vcr.scan('./fixtures/nested', options).then((cfg) => {
+			assert.deepEqual(cfg, {
+				from: cfg.from,
+				json: { test: 'package' }
+			});
+		});
+	});
+
 	it('Should return null if config is does not exists', () => {
 		const options = {
 			configFiles: ['not.json']

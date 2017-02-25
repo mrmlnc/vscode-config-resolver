@@ -147,6 +147,10 @@ export default class ConfigResolver {
 			}
 		}
 
+		if (config && this.options.packageProp && filepath.endsWith('package.json')) {
+			config = config[this.options.packageProp];
+		}
+
 		if (!config) {
 			throw new SyntaxError('No one parser could not parse file');
 		}
