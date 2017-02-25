@@ -121,7 +121,7 @@ export default class ConfigResolver {
 		}
 
 		const stats = await fs.statPath(filepath);
-		if (stats.ctime.getTime() === this.cachedConfig.ctime) {
+		if (filepath === this.cachedConfig.filepath && stats.ctime.getTime() === this.cachedConfig.ctime) {
 			return {
 				ctime: stats.ctime.getTime(),
 				config: this.cachedConfig.json
