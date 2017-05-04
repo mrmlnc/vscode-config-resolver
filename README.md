@@ -1,5 +1,7 @@
 # vscode-config-resolver
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mrmlnc/vscode-config-resolver.svg)](https://greenkeeper.io/)
+
 > Find configuration for the current file from provided path, workspace, package or HOME directory.
 
 ## Donate
