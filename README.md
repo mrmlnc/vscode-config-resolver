@@ -1,4 +1,4 @@
-# Deprecated
+# :warning: Deprecated
 
 Use [`config-profiler`](https://github.com/mrmlnc/config-profiler) package.
 
