@@ -1,3 +1,7 @@
+# Deprecated
+
+Use [`config-profiler`](https://github.com/mrmlnc/config-profiler) package.
+
 # vscode-config-resolver
 
 > Find configuration for the current file from provided path, workspace, package or HOME directory.
